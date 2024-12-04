@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website - VS Code </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="layout">
+        <!-- Vertical Icon Sidebar -->
+        <div id="icon-sidebar">
+            <div class="icon" data-panel="explorer" title="Explorer">📂</div>
+            <div class="icon" data-panel="search" title="Search">🔍</div>
+            <div class="icon" data-panel="settings" title="Settings">⚙️</div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="sidebar-header">
+                <h3>Explorer</h3>
+            </div>
+            <ul id="file-list">
+                <li data-section="home">Home</li>
+                <li data-section="about">About</li>
+                <li data-section="projects">Projects</li>
+                <li data-section="contact">Contact</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div id="main">
+            <!-- Breadcrumb -->
+            <div id="breadcrumb">
+                <span id="breadcrumb-path">Home</span>
+            </div>
+
+            <!-- Tab Section -->
+            <div id="tabs"></div>
+
+            <!-- Content Section -->
+            <div id="content">
+                <div id="home" class="content-section hidden">
+                    <h1>Welcome to My Personal Website</h1>
+                    <p>This is the home section. Feel free to explore the sidebar!</p>
+                </div>
+                <div id="about" class="content-section hidden">
+                    <h1>About Me</h1>
+                    <p>Details about who you are and what you do.</p>
+                </div>
+                <div id="projects" class="content-section hidden">
+                    <h1>My Projects</h1>
+                    <p>A showcase of your work and achievements.</p>
+                </div>
+                <div id="contact" class="content-section hidden">
+                    <h1>Contact Me</h1>
+                    <p>Provide ways for others to reach out to you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div id="status-bar">
+        <span id="status-bar-text">Ready</span>
+        <span id="theme-toggle" title="Toggle Theme">🌙</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
