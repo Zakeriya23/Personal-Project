@@ -14,6 +14,8 @@ body {
 #layout {
   display: flex;
   flex: 1;
+  height: calc(100vh - 40px); /* Subtract height of status bar */
+  overflow: hidden; /* Prevent scrolling on the entire layout */
 }
 
 /* Icon Sidebar */
@@ -25,6 +27,8 @@ body {
   align-items: center;
   padding: 1rem 0;
   border-right: 1px solid #444444;
+  height: 100%; /* Fixed height */
+  overflow: hidden; /* No scroll */
 }
 
 #icon-sidebar .icon {
@@ -48,6 +52,8 @@ body {
   flex-direction: column;
   padding: 0;
   border-right: 1px solid #444444;
+  height: 100%; /* Fixed height */
+  overflow: hidden; /* No scroll */
 }
 
 .sidebar-header {
@@ -80,6 +86,9 @@ body {
   padding: 0.5rem 1rem;
   border-bottom: 1px solid #333333;
   color: #d4d4d4;
+  position: sticky; /* Keep it fixed at the top */
+  top: 0;
+  z-index: 1; /* Ensure it stays above content */
 }
 
 #breadcrumb-path {
@@ -92,6 +101,9 @@ body {
   background-color: #252526;
   border-bottom: 1px solid #333333;
   overflow-x: auto;
+  position: sticky; 
+  top: 40px;
+  z-index: 1;
 }
 
 .tab {
@@ -121,7 +133,8 @@ body {
 #content {
   flex: 1;
   padding: 1rem;
-  overflow-y: auto;
+  overflow-y: auto; /* Enable vertical scrolling for main area */
+  height: 100%; 
 }
 
 .content-section.hidden {
