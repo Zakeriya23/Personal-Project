@@ -27,14 +27,18 @@ body {
   flex-direction: column;
   padding: 0;
   border-right: 1px solid #444444;
-  height: 100%; /* Fixed height */
-  overflow: hidden; /* No scroll */
+  height: 100%;
+  overflow: hidden;
+  font-size: 13px;
+  color: #d4d4d4;
 }
 
 .sidebar-header {
   padding: 1rem;
   border-bottom: 1px solid #333333;
-  text-align: center;
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 #file-list {
@@ -44,15 +48,41 @@ body {
 }
 
 #file-list li {
-  padding: 0.5rem 1rem;
-  background-color: #333333;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 1rem;
+  background-color: transparent;
   cursor: pointer;
-  transition: background-color 0.25s;
-  margin-bottom: 5px;
+  transition: background-color 0.25s, color 0.25s;
 }
 
 #file-list li:hover {
-  background-color: #444444;
+  background-color: #3c3c3c;
+  color: #ffffff;
+}
+
+#file-list li::before {
+  content: "📄";
+  margin-right: 0.5rem;
+  color: #d4d4d4;
+  font-size: 14px;
+}
+
+/* Specific file icons for clarity */
+#file-list li[data-section="home"]::before {
+  content: "🏠";
+}
+
+#file-list li[data-section="about"]::before {
+  content: "👤";
+}
+
+#file-list li[data-section="projects"]::before {
+  content: "📂";
+}
+
+#file-list li[data-section="contact"]::before {
+  content: "✉️";
 }
 
 /* Tabs */
@@ -61,7 +91,7 @@ body {
   background-color: #252526;
   border-bottom: 1px solid #333333;
   overflow-x: auto;
-  position: sticky; 
+  position: sticky;
   top: 0px;
   z-index: 1;
 }
@@ -94,7 +124,7 @@ body {
   flex: 1;
   padding: 1rem;
   overflow-y: auto; /* Enable vertical scrolling for main area */
-  height: 100%; 
+  height: 100%;
 }
 
 .content-section.hidden {
@@ -122,4 +152,17 @@ img {
   max-height: 300px;
   display: block;
   margin: 10px auto;
+}
+
+.img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+#home:not(.hidden) {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-40%, -40%);
+  text-align: center;
 }
