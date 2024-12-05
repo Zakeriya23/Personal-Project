@@ -4,6 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("theme-toggle");
   const statusText = document.getElementById("status-bar-text");
 
+  // Activate homepage by default
+  const homeSection = document.getElementById("home");
+  homeSection.classList.remove("hidden"); 
+  statusText.textContent = "Viewing home.html"; 
+
+  // Create a default tab for the homepage
+  const defaultTab = document.createElement("div");
+  defaultTab.classList.add("tab", "active");
+  defaultTab.setAttribute("data-section", "home");
+  defaultTab.innerHTML = `home.html<span class="close-btn">×</span>`;
+  tabsContainer.appendChild(defaultTab);
 
   // Handle file clicks
   fileList.forEach((file) => {
