@@ -9,7 +9,29 @@ body {
   flex-direction: column;
   height: 100vh;
 }
+/*Media Query for phones*/
+@media (max-width: 768px) {
+  #layout {
+    flex-direction: column; /* Stack sidebar and content */
+  }
 
+  #sidebar {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    border-right: none;
+    border-bottom: 1px solid #333333;
+  }
+
+  #file-list li {
+    padding: 0.5rem; /* Adjust padding for better touch*/
+    font-size: 16px; /* Larger font for readability on small screens */
+  }
+
+  #tabs {
+    flex-wrap: wrap;
+  }
+}
 /* Layout */
 #layout {
   display: flex;
