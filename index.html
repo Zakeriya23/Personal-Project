@@ -1,71 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website - VS Code </title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website - VS Code</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div id="layout">
-        <!-- Vertical Icon Sidebar -->
-        <div id="icon-sidebar">
-            <div class="icon" data-panel="explorer" title="Explorer">📂</div>
-            <div class="icon" data-panel="search" title="Search">🔍</div>
-            <div class="icon" data-panel="settings" title="Settings">⚙️</div>
+      <!-- Vertical Icon Sidebar -->
+      <div id="icon-sidebar">
+        <div class="icon" data-panel="explorer" title="Explorer">📂</div>
+        <div class="icon" data-panel="search" title="Search">🔍</div>
+        <div class="icon" data-panel="settings" title="Settings">⚙️</div>
+      </div>
+
+      <!-- Sidebar -->
+      <div id="sidebar">
+        <div class="sidebar-header">
+          <h3>Explorer</h3>
+        </div>
+        <ul id="file-list">
+          <li data-section="home">Home</li>
+          <li data-section="about">About</li>
+          <li data-section="projects">Projects</li>
+          <li data-section="contact">Contact</li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div id="main">
+        <!-- Breadcrumb -->
+        <div id="breadcrumb">
+          <span id="breadcrumb-path">Home</span>
         </div>
 
-        <!-- Sidebar -->
-        <div id="sidebar">
-            <div class="sidebar-header">
-                <h3>Explorer</h3>
-            </div>
-            <ul id="file-list">
-                <li data-section="home">Home</li>
-                <li data-section="about">About</li>
-                <li data-section="projects">Projects</li>
-                <li data-section="contact">Contact</li>
-            </ul>
+        <!-- Tab Section -->
+        <div id="tabs"></div>
+
+        <!-- Content Section -->
+        <div id="content">
+          <div id="home" class="content-section hidden">
+            <h1>Welcome to My Personal Website</h1>
+            <p>This is the home section. Feel free to explore the sidebar!</p>
+          </div>
+          <div id="about" class="content-section hidden">
+            <h1>About Me</h1>
+            <p>
+              Hello! My name is Zakeriya Muhumed, a passionate and driven
+              Computer Science student currently pursuing my Bachelor of Science
+              at Portland State University, expecting to graduate in Spring 2025.
+              I have a strong background in software development, cloud
+              computing, and decentralized systems, with a keen interest in
+              innovative technologies that solve real-world problems.
+            </p>
+            <p>
+              This summer, I had the incredible opportunity to intern at Amazon
+              Web Services (AWS) for 12 weeks, during which I achieved three
+              major certifications: AWS Cloud Practitioner, Solutions Architect
+              Associate (SAA), and Developer. These certifications are not just
+              milestones—they reflect the learning, dedication, and growth I
+              experienced at AWS. My time there allowed me to deepen my
+              understanding of cloud architecture and developer tools while
+              working alongside inspiring mentors and colleagues.
+            </p>
+            <p>
+              My professional experience also includes working as a Software
+              Engineer Intern at Code PDX, where I contributed to the
+              development of a decentralized document storage application for
+              housing-insecure individuals using React, JavaScript, and Solid.
+              Additionally, as a Research Assistant at Portland State
+              University, I collaborated on a National Science
+              Foundation-supported project to enhance software for microorganism
+              tracking with the ELVIS microscope aboard the ISS.
+            </p>
+            <p>
+              Beyond internships and research, I bring strong skills in
+              communication, teamwork, and problem-solving from my professional
+              experience in security operations. My technical expertise spans
+              programming languages such as C/C++, Python, Java, JavaScript, and
+              tools like AWS, Git, and Visual Studio.
+            </p>
+            <p>
+              I am deeply grateful for the opportunities I’ve had and the
+              mentors who’ve guided me. With a solid foundation built through
+              education and hands-on experience, I am excited about the future
+              and eager to continue growing, learning, and contributing to
+              meaningful projects.
+            </p>
+          </div>
+          <div id="projects" class="content-section hidden">
+            <h1>My Projects</h1>
+            <p>A showcase of your work and achievements.</p>
+          </div>
+          <div id="contact" class="content-section hidden">
+            <h1>Contact Me</h1>
+            <p>Provide ways for others to reach out to you.</p>
+          </div>
         </div>
-
-        <!-- Main Content -->
-        <div id="main">
-            <!-- Breadcrumb -->
-            <div id="breadcrumb">
-                <span id="breadcrumb-path">Home</span>
-            </div>
-
-            <!-- Tab Section -->
-            <div id="tabs"></div>
-
-            <!-- Content Section -->
-            <div id="content">
-                <div id="home" class="content-section hidden">
-                    <h1>Welcome to My Personal Website</h1>
-                    <p>This is the home section. Feel free to explore the sidebar!</p>
-                </div>
-                <div id="about" class="content-section hidden">
-                    <h1>About Me</h1>
-                    <p>Details about who you are and what you do.</p>
-                </div>
-                <div id="projects" class="content-section hidden">
-                    <h1>My Projects</h1>
-                    <p>A showcase of your work and achievements.</p>
-                </div>
-                <div id="contact" class="content-section hidden">
-                    <h1>Contact Me</h1>
-                    <p>Provide ways for others to reach out to you.</p>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
 
     <!-- Status Bar -->
     <div id="status-bar">
-        <span id="status-bar-text">Ready</span>
-        <span id="theme-toggle" title="Toggle Theme">🌙</span>
+      <span id="status-bar-text">Ready</span>
+      <span id="theme-toggle" title="Toggle Theme">🌙</span>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
