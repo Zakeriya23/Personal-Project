@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const fileList = document.querySelectorAll("#file-list li");
   const tabsContainer = document.getElementById("tabs");
-  const breadcrumb = document.getElementById("breadcrumb-path");
   const themeToggle = document.getElementById("theme-toggle");
   const statusText = document.getElementById("status-bar-text");
 
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     file.addEventListener("click", () => {
       const sectionId = file.getAttribute("data-section");
       const label = file.textContent.trim();
-      breadcrumb.textContent = label; 
       statusText.textContent = `Opened ${label}`;
       createTab(sectionId, label);
     });
@@ -53,8 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
           const lastTab = remainingTabs[remainingTabs.length - 1];
           const lastSectionId = lastTab.getAttribute("data-section");
           activateTab(lastTab, lastSectionId);
-        } else {
-          breadcrumb.textContent = ""; // Clear breadcrumb if no tabs remain
         }
       });
     }
@@ -68,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .forEach((t) => t.classList.remove("active"));
     tab.classList.add("active");
     statusText.textContent = `Viewing ${tab.textContent}`;
-    breadcrumb.textContent = tab.textContent.trim(); 
     document
       .querySelectorAll(".content-section")
       .forEach((section) => section.classList.add("hidden"));

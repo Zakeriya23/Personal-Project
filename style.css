@@ -19,7 +19,9 @@ body {
 }
 /* Sidebar */
 #sidebar {
-  width: 250px;
+  width: 150px; /* Fixed width */
+  min-width: 150px; /* Fixed */
+  max-width: 150px; /* fixed */
   background-color: #252526;
   display: flex;
   flex-direction: column;
@@ -53,21 +55,6 @@ body {
   background-color: #444444;
 }
 
-/* Breadcrumb */
-#breadcrumb {
-  background-color: #252526;
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid #333333;
-  color: #d4d4d4;
-  position: sticky; /* Keep it fixed at the top */
-  top: 0;
-  z-index: 1; /* Ensure it stays above content */
-}
-
-#breadcrumb-path {
-  font-size: 14px;
-}
-
 /* Tabs */
 #tabs {
   display: flex;
@@ -75,7 +62,7 @@ body {
   border-bottom: 1px solid #333333;
   overflow-x: auto;
   position: sticky; 
-  top: 40px;
+  top: 0px;
   z-index: 1;
 }
 
