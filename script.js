@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Activate homepage by default
   const homeSection = document.getElementById("home");
-  homeSection.classList.remove("hidden"); 
-  statusText.textContent = "Viewing home.html"; 
+  homeSection.classList.remove("hidden");
+  statusText.textContent = "Viewing home.html";
 
   // Create a default tab for the homepage
   const defaultTab = document.createElement("div");
@@ -74,31 +74,30 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById(sectionId).classList.remove("hidden");
   }
 
+  const form = document.querySelector("form");
 
-    const form = document.querySelector("form");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
 
-    form.addEventListener("submit", (event) => {
-      event.preventDefault(); // Prevent default form submission behavior
+    const formData = new FormData(form);
+    const formObject = {};
 
-      const formData = new FormData(form);
-      const formObject = {};
+    // Check for empty fields and gather data
+    let hasEmptyField = false;
 
-      // Check for empty fields and gather data
-      let hasEmptyField = false;
-
-      formData.forEach((value, key) => {
-        if (!value.trim()) {
-          hasEmptyField = true;
-        }
-        formObject[key] = value;
-      });
-
-      if (hasEmptyField) {
-        alert("Please fill in all required fields before submitting the form.");
-        return;
+    formData.forEach((value, key) => {
+      if (!value.trim()) {
+        hasEmptyField = true;
       }
-
-      console.log("Form Data Submitted:", formObject);
-      alert("Form submitted successfully!");
+      formObject[key] = value;
     });
+
+    if (hasEmptyField) {
+      alert("Please fill in all required fields before submitting the form.");
+      return;
+    }
+
+    console.log("Form Data Submitted:", formObject);
+    alert("Form submitted successfully!");
+  });
 });
