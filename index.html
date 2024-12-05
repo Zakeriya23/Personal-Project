@@ -34,7 +34,6 @@
               </h1>
               <p class="subtitle">Software Developer & Cloud Enthusiast</p>
             </div>
-            
           </div>
           <div id="about" class="content-section hidden">
             <h1>About Me</h1>
@@ -84,9 +83,12 @@
           <div id="projects" class="content-section hidden">
             <h1>My Projects</h1>
             <p>
-              <strong>Discom - Discord Replit</strong><br />
-              <a href="https://github.com/Zakeriya23/Discom" target="_blank"
-                >GitHub Repository</a
+              <a
+                href="https://github.com/Zakeriya23/Discom"
+                target="_blank"
+                class="project-link"
+              >
+                <strong>Discom - Discord Replit</strong> </a
               ><br />
               Discom is a web application developed using the MERN stack
               (MongoDB, Express, React, Node.js) that emulates core
@@ -106,9 +108,12 @@
               alt="Discom Screenshot 2"
             />
             <p>
-              <strong>Finance Tracking App</strong><br />
-              <a href="https://github.com/Zakeriya23/FinanceApp" target="_blank"
-                >GitHub Repository</a
+              <a
+                href="https://github.com/Zakeriya23/FinanceApp"
+                target="_blank"
+                class="project-link"
+              >
+                <strong>Finance Tracking App</strong> </a
               ><br />
               The Finance Tracking App is a Python-based application designed to
               help users manage personal expenses and budgets. It includes
@@ -129,8 +134,72 @@
             />
           </div>
           <div id="contact" class="content-section hidden">
-            <h1>Contact Me</h1>
-            <p>Provide ways for others to reach out to you.</p>
+            <div class="contact-container">
+              <div class="contact-left">
+                <h1>Contact</h1>
+                <p>Send me a message or reach out via the links below.</p>
+              </div>
+              <div class="contact-right">
+                <h2>Reach Out</h2>
+                <p>
+                  <a href="mailto:Zakeriyam23@gmail.com"
+                    >Zakeriyam23@gmail.com</a
+                  >
+                </p>
+                <p>
+                  <a href="https://github.com/Zakeriya23" target="_blank"
+                    >GitHub</a
+                  >
+                </p>
+                <p>
+                  <a href="https://www.linkedin.com/in/muhumed" target="_blank"
+                    >LinkedIn</a
+                  >
+                </p>
+
+                <form action="/submit-contact" id="contact-form">
+                  <h2>Or Send a Message</h2>
+
+                  <div class="form-field">
+                    <label for="name" class="form-label">Name:</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Full Name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="email" class="form-label">Email:</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="name@example.com"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Write your message here..."
+                      rows="5"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div id="button-group">
+                    <input id="submit-btn" type="submit" value="Submit" />
+                    <input id="reset-btn" type="reset" value="Reset" />
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -139,7 +208,6 @@
     <!-- Status Bar -->
     <div id="status-bar">
       <span id="status-bar-text">Ready</span>
-      <span id="theme-toggle" title="Toggle Theme">🌙</span>
     </div>
 
     <script src="script.js"></script>

@@ -4,13 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("theme-toggle");
   const statusText = document.getElementById("status-bar-text");
 
-  // Theme toggle functionality
-  let isDarkTheme = true;
-  themeToggle.addEventListener("click", () => {
-    isDarkTheme = !isDarkTheme;
-    document.body.style.backgroundColor = isDarkTheme ? "#1E1E1E" : "#FFFFFF";
-    themeToggle.textContent = isDarkTheme ? "🌙" : "☀️";
-  });
 
   // Handle file clicks
   fileList.forEach((file) => {
