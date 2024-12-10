@@ -42,9 +42,5 @@ Contact Page inspiration:
 
 ---
 
-## 📝 **Future Enhancements**
-- Add server-side functionality for the contact form.
----
-
 ## 🌟 **Acknowledgments**
 Special thanks to the instructors and course materials for guiding the development of this project. 
